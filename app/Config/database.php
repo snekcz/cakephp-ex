@@ -92,6 +92,7 @@ class DATABASE_CONFIG {
 	public function __construct() {
 
         $datasource = 'Database/'.ucfirst(getenv('DATABASE_ENGINE'));
+		echo '---- ' . $datasource . ' ------';
 
         $this->default['host']       = getenv(strtoupper(getenv("DATABASE_SERVICE_NAME"))."_SERVICE_HOST");
         $this->default['port']       = getenv(strtoupper(getenv("DATABASE_SERVICE_NAME"))."_SERVICE_PORT");
