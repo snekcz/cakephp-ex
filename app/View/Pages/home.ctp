@@ -88,7 +88,7 @@ endif;
 if (isset($filePresent)):
 	App::uses('ConnectionManager', 'Model');
 	try {
-		$connected = ConnectionManager::getDataSource('default');
+		$connected = ConnectionManager::getDataSource('cakephp_test_db');
 	} catch (Exception $connectionError) {
 		$connected = false;
 		$errorMsg = $connectionError->getMessage();
